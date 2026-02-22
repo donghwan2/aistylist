@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# 🤖 AiStylist - 프론트엔드 프로젝트 시작하기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+반가워요! 이 프로젝트는 **Vite**를 기반으로 한 **React**와 **TypeScript** 연습용 프로젝트입니다. 프론트엔드 개발에 처음 입문하시는 분들을 위해 프로젝트의 구성과 도구들을 쉽게 설명해 드릴게요.
 
-Currently, two official plugins are available:
+## 🛠 사용된 기술 (Tech Stack)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+이 프로젝트는 요즘 프론트엔드 개발에서 가장 많이 쓰이는 표준적인 도구들로 채워져 있어요.
 
-## React Compiler
+*   **Vite**: 웹사이트를 아주 빠르게 빌드하고 실행해주는 도구예요.
+*   **React**: UI(화면)를 컴포넌트라는 작은 단위로 나누어 만들 수 있게 해주는 라이브러리예요.
+*   **TypeScript**: 자바스크립트에 '타입'이라는 규칙을 더해서 실수를 줄여주는 언어예요.
+*   **ESLint**: 코드를 작성할 때 틀린 부분이 있는지 실시간으로 검사해주는 도구예요.
+*   **Prettier**: 코드를 예쁘고 보기 좋게 자동으로 정렬해주는 도구예요.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 프로젝트 실행 방법
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+먼저 컴퓨터에 [Node.js](https://nodejs.org/)가 설치되어 있어야 해요.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **패키지 설치하기** (필요한 도구들을 다운로드해요)
+    ```bash
+    npm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **개발 서버 실행하기** (내 컴퓨터에서 웹사이트를 띄워봐요)
+    ```bash
+    npm run dev
+    ```
+    명령어를 입력하면 나오는 주소(예: `http://localhost:5173`)를 브라우저에서 열어보세요!
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 폴더 구조 살펴보기
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+초보자라면 딱 두 군데만 기억하세요!
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   **`src/`**: 우리가 실제로 코드를 작성하는 공간이에요.
+    *   `main.tsx`: 프로젝트의 시작점이에요.
+    *   `App.tsx`: 메인 화면 페이지예요. 여기서부터 수정을 시작해보세요!
+    *   `App.css`: 화면을 꾸미는 스타일 파일이에요.
+*   **`public/`**: 이미지나 폰트 같은 정적 파일들이 들어가는 곳이에요.
+
+---
+
+## ✍️ 알아두면 좋은 명령어
+
+*   `npm run format`: Prettier가 코드를 자동으로 정렬해줘요. (코드가 지저분할 때 실행해보세요!)
+*   `npm run lint`: ESLint가 코드에 문법 오류가 없는지 검사해줘요.
+*   `npm run build`: 실제 배포를 위한 파일을 만들 때 사용해요.
+
+---
+
+## 💡 팁
+처음에는 `src/App.tsx` 파일에 적힌 글자들을 조금씩 바꿔보면서 화면이 어떻게 변하는지 관찰해보는 것을 추천드려요. 화이팅입니다! 🚀
