@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="profile-container">
-      <h1>AI 나만의 스타일리스트</h1>
+      <h1>나만의 AI 스타일리스트</h1>
       <p>당신에게 꼭 맞는 스타일을 찾기 위해<br />기본 정보를 알려주세요!</p>
 
       <form onSubmit={handleSubmit}>
