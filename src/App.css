@@ -133,3 +133,32 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+
+/* Report Section */
+.report-container {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  text-align: left;
+}
+
+.report-container h2 {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.report-content {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  white-space: pre-wrap;
+}
+
+.report-content p {
+  margin-bottom: 0.75rem;
+}
